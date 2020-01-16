@@ -1,0 +1,71 @@
+@import '../variables/variables';
+
+.hero{
+  z-index: 100;
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(70deg, rgba(35, 38, 42, 1) 0%, rgba(35, 38, 42, 0.9) 15%, rgba(35, 38, 42, 0.6) 30%, rgba(0, 169, 202, 0.2) 70%, rgba(0, 169, 202, 0.9) 100%), url('../../assets/HeroImage7.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+
+  .hero__particles{
+    z-index: 1;
+    position: absolute;
+    top: 60vh;
+    left: 0;
+    max-width: 100vw;
+    img{
+      width: 100%;
+    }
+  }
+}
+
+.hero__description{
+  z-index: 100;
+  height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .hero__description-content{
+    width: 600px;
+  }
+
+  .hero__description-content{
+    z-index: 100;
+    margin-left: 190px;
+
+    .hero__description-title{
+      position: relative;
+      color: $white;
+      font-weight: 100;
+      font-size: 3.5rem;
+    }
+
+    .hero__description-text{
+      position: relative;
+      color: $white;
+      margin-top: 20px;
+    }
+
+  }
+}
+
+.main-cta{
+  position: relative;
+  z-index: 100;
+  margin-top: 20px;
+  display: inline-block;
+  padding: 15px 30px;
+  background: $lightBlue;
+}
+
+@media(max-width: 1200px){
+  .hero__description{
+    .hero__description-content{
+      margin-left: 0;
+      width: 90%;
+    }
+  }
+}
+

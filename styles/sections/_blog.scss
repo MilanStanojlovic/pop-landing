@@ -1,0 +1,104 @@
+@import '../variables/variables';
+
+.blog{
+  margin-top: 100px;
+  color: $white;
+  z-index: 50;
+}
+
+.separator{
+  height: 300px;
+  background-color: $white;
+  margin-top: -400px;
+}
+
+.blog__heading-container{
+  display: flex;
+  justify-content: center;
+  .blog__heading{
+    font-weight: 100;
+    font-size: 2rem;
+  }
+}
+
+.blog__container-outer{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.blog__container{
+  margin-top: 100px;
+  display: grid;
+  gap: 20px;
+  
+  grid-template-areas: 
+  "run run lifting lifting"
+  "run run cycling boxing";
+
+  .blog__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    .blog__item-content{
+      margin: 0 0 20px 20px;
+    }
+  }
+
+  .running{
+    grid-area: run;
+    background: linear-gradient(0deg, rgba(44,193,219,1) 0%, rgba(0,212,255,0) 45%), url('../../assets/running.jpg');
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .lifting{
+    grid-area: lifting;
+    background: linear-gradient(0deg, rgba(44,193,219,1) 0%, rgba(0,212,255,0) 45%), url('../../assets/lifting.jpg');
+    min-height: 250px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .cycling{
+    grid-area: cycling;
+    background: linear-gradient(0deg, rgba(44,193,219,1) 0%, rgba(0,212,255,0) 45%), url('../../assets/cycling.jpg');
+    background-position: top;
+    min-height: 250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .boxing{
+    grid-area: boxing;
+    background: linear-gradient(0deg, rgba(44,193,219,1) 0%, rgba(0,212,255,0) 45%), url('../../assets/box.jpg');
+    min-width: 250px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@media(max-width: 900px){
+  .blog__container{
+    grid-template-areas: 
+    "run run lifting lifting"
+    "cycling cycling boxing boxing";
+  }
+}
+
+@media(max-width: 700px){
+  .blog__container{
+    grid-template-areas: 
+    "run run run run"
+    "lifting lifting lifting lifting"
+    "cycling cycling cycling cycling"
+    "boxing boxing boxing boxing";
+  }
+  .running{
+    min-height: 200px;
+  }
+
+  .boxing{
+    min-height: 200px;
+  }
+}

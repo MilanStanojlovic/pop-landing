@@ -1,0 +1,6 @@
+@import '../variables/variables';
+
+.hero__header{
+  background-color: $darkBlueNav;
+  border-bottom: 1px solid rgba($color: #fff, $alpha: 0.2);
+}

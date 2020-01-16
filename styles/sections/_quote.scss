@@ -1,0 +1,31 @@
+@import '../variables/variables';
+
+.quote{
+  margin-top: 150px;
+  position: relative;
+  // height: 300px;
+}
+
+.quote__image{
+  position: absolute;
+  top: -250px;
+  width: 500px;
+  left: 0;
+  img{
+    width: 100%;
+  }
+}
+
+.quote__item{
+  position: relative;
+  z-index: 100;
+  margin: 0 auto;
+  width: 60%;
+  background-color: $lightBlue1;
+  padding: 45px 70px;
+  .quote__text{
+    text-align: center;
+    font-weight: 400;
+    color: $white;
+  }
+}

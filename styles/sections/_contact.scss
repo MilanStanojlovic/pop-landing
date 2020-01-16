@@ -1,0 +1,36 @@
+@import '../variables/variables';
+
+.contact{
+  position: relative;
+  // z-index: 10;
+  margin-top: 250px;
+  text-align: center;
+  color: $white;
+  height: 400px;
+
+  .contact__heading{
+    font-weight: 100;
+    font-size: 2rem;
+    position: relative;
+    z-index: 10;
+  }
+  
+  
+  .contact__link-container{
+    margin-top: 50px;
+    position: relative;
+    z-index: 10;
+  }
+  
+}
+.basketball__container{
+  position: absolute;
+  z-index: 0;
+  top: -60px;
+  right: 100px;
+  width: 500px;
+  opacity: 0.3;
+  img{
+    width: 100%;
+  }
+}
